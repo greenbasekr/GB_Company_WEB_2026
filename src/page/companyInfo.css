@@ -1,0 +1,79 @@
+.company-hero { background-image: linear-gradient(90deg, #00180ee6, #00180e50), var(--hero-image); }
+.company-two-columns { display: grid; grid-template-columns: .85fr 1.15fr; gap: 60px; }
+.company-section-heading > p { color: #008044; font-size: 16px; font-weight: 500; letter-spacing: .3px; }
+.company-section-heading h2 { margin-top: 16px; font-size: 32px; line-height: 1.4; word-break: keep-all; }
+.company-intro { padding: 110px 0 120px; }
+.company-intro-copy h3 { font-size: 32px; line-height: 1.4; font-weight: 400; letter-spacing: -.8px; word-break: keep-all; }
+.company-intro-copy h3 span { color: #007246; }
+.company-intro-copy > p { margin-top: 28px; color: #777; font-size: 17px; line-height: 1.7; word-break: keep-all; }
+.company-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 30px 0 0; padding-top: 24px; border-top: 1px solid #ccc; }
+.company-facts dt { color: #008044; font-size: 15px; }
+.company-facts dd { color: #888; font-size: 17px; margin: 6px 0 0; line-height: 1.5; }
+.company-technology { background: #f0f5f2; padding: 60px 0 100px; }
+.company-technology-list { margin-top: 22px; }
+.company-technology-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 10px; }
+.company-technology-row img { width: 100%; height: 300px; object-fit: cover; border-radius: 5px; filter: brightness(.75) saturate(.65); }
+.company-technology-copy { padding: 22px 0; max-width: 360px; }
+.company-step { color: #008044; font-size: 16px; }
+.company-technology-copy h3 { margin-top: 10px; font-size: 28px; font-weight: 500; }
+.company-technology-copy > p:last-child { margin-top: 20px; font-size: 17px; color: #666; line-height: 1.5; word-break: keep-all; }
+.company-technology-row:nth-child(even) img { grid-column: 2; grid-row: 1; }
+.company-technology-row:nth-child(even) .company-technology-copy { grid-column: 1; grid-row: 1; text-align: right; justify-self: end; }
+.company-credentials { padding: 95px 0 105px; background: #f8faf9; }
+.company-credential-preview { margin: 42px 0 0; width: 85%; max-width: 306px; }
+.company-credential-preview img { width: 100%; height: auto; aspect-ratio: 210 / 297; object-fit: contain; background: #fff; border: 1px solid #e0e5e2; border-radius: 5px; animation: caption-enter .35s ease-out; }
+.company-credential-preview figcaption { margin-top: 6px; font-size: 14px; line-height: 1.5; height: 21px; color: #888; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.company-credential-filters { display: flex; gap: 10px; padding: 7px 0 12px; border-bottom: 1px solid #008044; }
+.company-credential-filters button { border: 1px solid #008044; color: #008044; border-radius: 20px; font-size: 13px; padding: 3px 18px; background: transparent; transition: background-color .2s ease; }
+.company-credential-filters button[aria-pressed='true'] { background: #c6e4d5; }
+.company-credentials-list ul { margin: 0; padding: 0; list-style: none; }
+.company-credentials-list li { border-bottom: 1px solid #ccc; }
+.company-credentials-list li button { display: grid; grid-template-columns: 52px 1fr; gap: 12px; width: 100%; text-align: left; padding: 12px 0; border: 0; background: none; font-size: 15px; line-height: 1.5; }
+.company-credentials-list li button:hover, .company-credentials-list li button[aria-pressed='true'] { color: #007246; background: #edf4ef; }
+.company-organization { padding: 85px 0 50px; }
+.company-representative { border-bottom: 1px solid #008044; padding-bottom: 12px; }
+.company-representative span { font-size: 15px; color: #008044; margin-right: 12px; }
+.company-representative strong { font-size: 23px; font-weight: 500; }
+.company-organization-content dl { margin: 0; }
+.company-organization-content dl > div { display: grid; grid-template-columns: 1fr 2fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid #ccc; }
+.company-organization-content dt, .company-organization-content h3 { font-size: 15px; font-weight: 500; line-height: 1.5; }
+.company-organization-content dd { margin: 0; }
+.company-organization-content dd p { color: #888; font-size: 15px; line-height: 1.5; }
+.company-organization-content dd section + section { margin-top: 24px; }
+.company-contact { background: #192f23; color: #fff; padding: 90px 0; }
+.company-contact .company-section-heading > p { color: #a5c886; }
+.company-contact .company-section-heading h2 { font-size: 30px; }
+.company-contact-locations article { display: flex; align-items: center; justify-content: space-between; gap: 24px; border-top: 1px solid #637465; padding: 22px 0; }
+.company-contact-locations .company-location-label { color: #a5c886; font-size: 13px; }
+.company-contact-locations h3 { font-size: 16px; font-weight: 500; line-height: 1.5; margin-top: 7px; word-break: keep-all; }
+.company-contact-locations p:last-child { color: #b6c7b6; font-size: 13px; margin-top: 5px; }
+.company-contact-locations a { font-size: 13px; flex-shrink: 0; }
+.company-contact-locations a:hover { text-decoration: underline; text-underline-offset: 5px; }
+@media (min-width: 1440px) { .company-technology-row img { height: 360px; } }
+@media (max-width: 900px) {
+  .company-two-columns { gap: 32px; grid-template-columns: .8fr 1.2fr; }
+  .company-section-heading h2 { font-size: 28px; }
+  .company-intro-copy h3 { font-size: 27px; }
+  .company-facts { grid-template-columns: 1fr; gap: 15px; }
+  .company-technology-row img { height: 280px; }
+  .company-organization-content dl > div { gap: 14px; }
+  .company-contact-locations article { align-items: flex-start; flex-direction: column; gap: 14px; }
+}
+@media (max-width: 640px) {
+  .company-two-columns { grid-template-columns: minmax(0, 1fr); gap: 35px; }
+  .company-intro, .company-credentials, .company-organization, .company-contact { padding-block: 60px; }
+  .company-technology { padding: 50px 0 60px; }
+  .company-intro-copy h3 { font-size: 26px; }
+  .company-intro-copy > p { font-size: 16px; }
+  .company-technology-row { grid-template-columns: minmax(0, 1fr); gap: 0; margin-top: 30px; }
+  .company-technology-row:nth-child(even) img, .company-technology-row:nth-child(even) .company-technology-copy { grid-column: auto; grid-row: auto; text-align: left; justify-self: stretch; }
+  .company-technology-row img { height: 245px; }
+  .company-technology-copy { max-width: none; padding-bottom: 0; }
+  .company-technology-copy h3 { font-size: 25px; }
+  .company-technology-copy > p:last-child { margin-top: 12px; font-size: 16px; }
+  .company-credential-preview { margin-top: 28px; }
+  .company-credential-filters { gap: 8px; }
+  .company-credential-filters button { padding-inline: 15px; }
+  .company-credentials-list li button { grid-template-columns: 35px 1fr; font-size: 14px; }
+  .company-organization-content dl > div { grid-template-columns: 1fr; gap: 12px; }
+}

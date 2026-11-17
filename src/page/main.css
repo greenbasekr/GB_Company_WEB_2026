@@ -1,0 +1,143 @@
+.news-section { padding: 120px 0 110px; min-height: 520px; }
+.news-layout { display: grid; grid-template-columns: 1fr 1.85fr; gap: 48px; }
+.news-intro .text-link { margin-top: 36px; }
+.news-tabs { height: 33px; display: flex; gap: 8px; border-bottom: 1px solid #909090; }
+.news-tabs button { background: none; border: 0; padding: 0 24px 14px; color: #aaa; font-size: 16px; position: relative; }
+.news-tabs button.active { color: #008044; font-weight: 700; }
+.news-tabs button.active::after { content: ''; position: absolute; bottom: -1px; height: 2px; background: #008044; left: 0; right: 0; }
+.news-list { margin: 0; padding: 0; list-style: none; }
+.news-list li { border-bottom: 1px solid #d6d6d6; }
+.news-list a { width: 100%; display: grid; grid-template-columns: 85px 1fr 65px 20px; align-items: center; text-align: left; border: 0; padding: 19px 33px 19px 44px; background: transparent; min-height: 57px; font-size: 15px; }
+.news-list a:hover { background: #f5f9f7; }
+.news-category { color: #008044; font-weight: 700; }
+.news-list strong { font-weight: 500; }
+.news-list time { font-size: 13px; color: #606060; }
+.news-list .arrow { width: 17px; color: #666; }
+.services-section { padding: 60px 0 95px; background: #00180e; color: #fff; min-height: 700px; }
+.services-section .eyebrow { color: #00c985; }
+.services-section h2 { margin-top: 9px; }
+.featured-services { display: grid; grid-template-columns: 1fr 1fr; gap: 34px; margin-top: 27px; }
+.service-photo-card { position: relative; height: 290px; border-radius: 22px; overflow: hidden; background: #142d25; }
+.service-photo-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, #00150f25 25%, #00000020 55%, #000000ed); }
+.service-photo-card img { width: 100%; height: 100%; object-fit: cover; filter: brightness(.7) saturate(.65); transition: transform .4s; }
+.service-photo-card:hover img { transform: scale(1.035); }
+.service-photo-card > div { position: absolute; z-index: 1; bottom: 14px; left: 12px; right: 12px; }
+.service-photo-card h3, .service-small-card h3 { font-size: 18px; font-weight: 500; letter-spacing: -.5px; }
+.service-photo-card p, .service-small-card p { color: #a5aaa7; font-size: 13px; margin-top: 3px; }
+.small-services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 27px; margin-top: 28px; }
+.service-small-card { border: 1px solid #26372f; background: #0d2118; border-radius: 11px; padding: 16px; min-height: 120px; }
+.service-icon { display: block; background: #dedede; width: 30px; height: 30px; border-radius: 50%; margin-bottom: 12px; }
+.projects-section { padding: 95px 0 105px; min-height: 700px; overflow: hidden; }
+.project-layout { display: grid; grid-template-columns: 35% 65%; align-items: center; margin-top: 68px; }
+.project-layout > * { min-width: 0; }
+.project-copy { align-self: stretch; display: flex; flex-direction: column; justify-content: space-between; padding: 7px 0 17px; }
+.project-count { color: #008044; font-weight: 700; font-size: 19px; }
+.project-copy h3 { font-size: 27px; font-weight: 500; letter-spacing: -1px; margin-top: 6px; }
+.project-description { color: #666; margin-top: 20px; line-height: 1.35; font-size: 18px; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 12px; }
+.project-tags span { font-size: 13px; font-weight: 700; padding: 3px 13px; background: #008044; color: white; border-radius: 20px; }
+.project-actions { margin-top: 65px; }
+.project-dots { display: flex; gap: 10px; margin-top: 16px; }
+.project-dots button { padding: 0; border: 1px solid #008044; width: 15px; height: 15px; background: #fff; border-radius: 50%; }
+.project-dots button.active { background: #008044; }
+.device-composition { position: relative; width: 100%; aspect-ratio: 1.8; align-self: center; font-family: Arial, 'Pretendard', sans-serif; }
+.laptop { position: absolute; width: 89%; left: 0; top: 0; height: 91%; }
+.laptop-screen { height: 95%; margin: 0 7%; padding: 14px 10px 12px; border: 3px solid #555; border-radius: 19px 19px 5px 5px; background: #0c0e10; box-shadow: 0 1px 3px #888; color: #e3e9eb; }
+.dashboard-header { height: 13%; display: flex; align-items: center; gap: 12px; background: #0e1c25; padding: 5px; font-size: 7px; white-space: nowrap; }
+.dashboard-brand { color: #00e66a; font-weight: 700; font-size: 10px; }
+.dashboard-time { margin-left: auto; font-size: 5px; color: #bac8d0; }
+.dashboard-body { display: flex; height: 87%; background: linear-gradient(120deg, #142733, #081720); }
+.dashboard-sidebar { width: 23%; padding: 14px 5px; display: flex; flex-direction: column; gap: 14px; font-size: 6px; }
+.dashboard-sidebar span { white-space: nowrap; }
+.dashboard-sidebar .selected { border: 1px solid #00785f; border-radius: 12px; padding: 5px 2px; color: #00d58d; margin-top: -5px; }
+.dashboard-content { flex: 1; min-width: 0; padding: 3px 5px 10px; }
+.dashboard-content h4 { font-size: 8px; margin: 9px 0 7px; }
+.battery-panels { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5px; }
+.battery-panel { background: #142630; border: 1px solid #223744; border-radius: 7px; padding: 9px 5px; font-size: 5px; text-align: center; }
+.battery-panel > strong { font-size: 6px; }
+.battery-panel > small { display: block; color: #00e36c; margin: 6px 0; font-size: 5px; }
+.charge-ring { aspect-ratio: 1; background: conic-gradient(#00dc64 var(--charge, 80.5%), #264252 0); border-radius: 50%; padding: 5px; margin: 7px 0 12px; }
+.charge-ring > div { background: #10232e; border-radius: 50%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.charge-ring b { font-size: clamp(10px, 1.2vw, 18px); }
+.charge-ring span { font-size: 5px; margin-top: 3px; }
+.battery-panel p { display: flex; justify-content: space-between; margin-top: 9px; font-size: 5px; }
+.battery-panel p b { font-weight: 400; }
+.battery-status { height: 4px; margin-top: 6px; background: #00d764; border-radius: 5px; }
+.laptop-base { position: absolute; height: 16px; left: -2%; right: -2%; bottom: 1%; background: linear-gradient(#c6c9ca, #4e5053 50%, #121314 65%, #aaa); border-radius: 0 0 45% 45%; box-shadow: 0 12px 12px #0002; }
+.laptop-base::after { content: ''; position: absolute; width: 19%; height: 5px; top: 0; left: 40.5%; border-radius: 0 0 10px 10px; background: #646567; }
+.phone { position: absolute; bottom: 2%; right: 0; width: 21%; height: 75%; padding: 7px 7px 5px; border: 3px solid #676767; border-radius: 23px; background: #101717; color: white; box-shadow: 2px 6px 6px #0003; font-size: 5px; }
+.phone-camera { position: absolute; top: 3px; left: 35%; width: 30%; height: 5px; background: #000; border-radius: 7px; }
+.phone-top { display: flex; justify-content: space-between; font-size: 4px; margin-bottom: 9px; }
+.phone > small { display: block; color: #00db69; text-align: right; font-size: 4px; margin-top: 4px; }
+.phone .charge-ring { background: conic-gradient(#00c6fa 80.5%, #14384f 0); padding: 4px; margin: 8px auto; width: 70%; }
+.phone .charge-ring > div { background: #008bc3; }
+.phone .charge-ring b { font-size: 12px; }
+.phone-status { display: block; color: #00dd68; text-align: center; font-size: 6px; }
+.phone-metrics { margin-top: 9px; }
+.phone-metrics p { display: flex; justify-content: space-between; margin: 6px 0; font-size: 4px; }
+.phone-state { display: flex; justify-content: space-between; margin-top: 10px; }
+.phone-state span { color: #00e269; }
+.phone-nav { margin-top: 12px; padding-top: 7px; border-top: 1px solid #263c36; text-align: center; color: #00df78; font-size: 10px; }
+@media (min-width: 1440px) {
+  .service-photo-card { height: 360px; }
+  .dashboard-header { font-size: 9px; }
+  .battery-panel > strong { font-size: 8px; }
+  .battery-panel p, .dashboard-sidebar { font-size: 7px; }
+}
+@media (max-width: 900px) {
+  .news-layout { grid-template-columns: 1fr 1.65fr; gap: 25px; }
+  .news-list a { padding-inline: 12px; grid-template-columns: 70px 1fr 60px 20px; }
+  .project-layout { grid-template-columns: 36% 64%; }
+  .project-copy h3 { font-size: 23px; }
+  .project-tags span { padding-inline: 8px; font-size: 12px; }
+  .project-actions { margin-top: 36px; }
+  .project-description { font-size: 16px; }
+  .dashboard-time { display: none; }
+  .phone { border-radius: 17px; padding: 6px 5px; }
+  .phone-metrics p { margin-block: 4px; }
+  .phone-nav { margin-top: 6px; padding-top: 4px; }
+}
+@media (max-width: 640px) {
+  .news-section { padding: 75px 0; }
+  .news-layout { grid-template-columns: 1fr; gap: 32px; }
+  .news-intro .text-link { margin-top: 20px; }
+  .news-list a { padding: 19px 4px; grid-template-columns: 70px 1fr 62px 18px; font-size: 14px; }
+  .services-section { padding: 55px 0 65px; }
+  .services-section h2 { max-width: 360px; line-height: 1.4; }
+  .featured-services { grid-template-columns: 1fr; gap: 18px; margin-top: 25px; }
+  .service-photo-card { height: 270px; }
+  .small-services { grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
+  .service-small-card { display: grid; grid-template-columns: 42px 1fr; align-content: center; min-height: 96px; padding: 14px; }
+  .service-icon { grid-row: 1 / 3; align-self: center; margin: 0; }
+  .projects-section { padding: 75px 0; }
+  .project-layout { grid-template-columns: 1fr; gap: 35px; margin-top: 30px; }
+  .project-copy { padding: 0; }
+  .project-copy h3 { font-size: 27px; }
+  .project-description { font-size: 18px; }
+  .project-actions { margin-top: 26px; }
+  .device-composition { max-width: 520px; margin-inline: auto; height: 230px; aspect-ratio: auto; }
+  .dashboard-header { gap: 5px; font-size: 5px; }
+  .dashboard-brand { font-size: 7px; }
+  .dashboard-sidebar { font-size: 4px; padding-inline: 3px; gap: 12px; }
+  .dashboard-content h4 { font-size: 6px; }
+  .battery-panel { padding: 5px 3px; }
+  .battery-panel > strong { font-size: 4px; }
+  .battery-panel p { margin-top: 6px; font-size: 4px; }
+  .charge-ring { padding: 3px; margin-bottom: 7px; }
+  .charge-ring b { font-size: 10px; }
+  .laptop-screen { padding: 8px 5px; border-radius: 12px 12px 4px 4px; }
+  .phone { height: 185px; width: 22%; bottom: 0; border-radius: 14px; padding: 6px 4px; }
+  .phone .charge-ring { margin-block: 5px; padding: 3px; }
+  .phone .charge-ring b { font-size: 9px; }
+  .phone-top { margin-bottom: 6px; }
+  .phone-metrics { margin-top: 6px; }
+  .phone-state { margin-top: 5px; }
+  .phone-nav { font-size: 8px; }
+}
+.news-section .eyebrow,
+.services-section .eyebrow,
+.projects-section .eyebrow {
+  font-size: 20px;
+  font-weight: 500;
+}
+

@@ -1,0 +1,40 @@
+.navigation a { position: relative; }
+.hero { position: relative; isolation: isolate; background: #05241b; }
+.hero-backdrop { position: absolute; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.hero-backdrop img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; }
+.hero-backdrop img.is-ready { animation: hero-zoom-out 2.4s cubic-bezier(.16, 1, .3, 1) both; }
+.hero-backdrop::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #00252ad1, #001e2140); }
+.company-hero .hero-backdrop::after { background: linear-gradient(90deg, #00180ee6, #00180e50); }
+.company-technology-list { overflow: clip; }
+@keyframes hero-zoom-out { from { transform: scale(1.1); } to { transform: scale(1); } }
+.navigation a::after { content: ''; position: absolute; left: 0; bottom: 2px; width: 100%; height: 2px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+.navigation a:hover::after, .navigation a:focus-visible::after, .navigation a[aria-current='page']::after { transform: scaleX(1); }
+.hero-button, .news-article-actions a, .footer-social button { transition: background-color .25s ease, color .25s ease, translate .25s ease, box-shadow .25s ease; }
+.hero-button .arrow, .text-link .arrow { transition: transform .25s ease; }
+.service-small-card, .service-process li { transition: translate .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.project-gallery-image, .service-photo-card { transition: box-shadow .3s ease; }
+.news-list a, .news-table td, .news-tabs button, .service-tabs button, .news-pagination a { transition: color .2s ease, background-color .2s ease; }
+.project-dots button { transition: background-color .25s ease, transform .25s ease; }
+.project-dots button.active { transform: scale(1.12); }
+.detail-slide-image img { animation: slide-image-enter .55s ease-out both; }
+.detail-slide-title { animation: caption-enter .35s ease-out; }
+.notice-dialog[open] { animation: dialog-enter .25s cubic-bezier(.22, 1, .36, 1); }
+.notice-dialog[open]::backdrop { animation: backdrop-enter .2s ease-out; }
+@keyframes slide-image-enter { from { opacity: 0; transform: scale(1.025); } to { opacity: 1; transform: scale(1); } }
+@keyframes caption-enter { from { opacity: 0; translate: 0 5px; } to { opacity: 1; translate: 0 0; } }
+@keyframes dialog-enter { from { opacity: 0; translate: 0 10px; } to { opacity: 1; translate: 0 0; } }
+@keyframes backdrop-enter { from { opacity: 0; } to { opacity: 1; } }
+@media (hover: hover) and (pointer: fine) {
+  .hero-button:hover, .news-article-actions a:hover { translate: 0 -2px; box-shadow: 0 5px 16px #00180e15; }
+  .hero-button:hover .arrow, .text-link:hover .arrow { transform: translateX(4px); }
+  .service-small-card:hover { translate: 0 -4px; border-color: #438769; box-shadow: 0 10px 22px #0002; }
+  .service-process li:hover { translate: 0 -4px; box-shadow: 0 10px 22px #00331b10; }
+  .project-gallery-card a:hover .project-gallery-image, .service-photo-card:hover { box-shadow: 0 10px 24px #00180e20; }
+  .footer-social button:hover { translate: 0 -2px; color: #008044; }
+}
+@media (max-width: 640px) {
+  .navigation.is-open { animation: dialog-enter .22s ease-out; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .detail-slide-image img, .detail-slide-title, .notice-dialog[open], .notice-dialog[open]::backdrop, .navigation.is-open { animation: none; }
+}
