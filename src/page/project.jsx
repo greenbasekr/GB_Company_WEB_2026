@@ -1,3 +1,4 @@
+import { siteUrl } from '../utils/site-url.js'
 import Hero from '../components/hero.jsx'
 import Footer from '../components/footer.jsx'
 import './project.css'
@@ -38,7 +39,7 @@ export default function ProjectPage() {
             <div className="project-gallery">
               {projects.map(project => (
                 <article className="project-gallery-card" key={project.id}>
-                  <a href={`/project/${project.id}`}>
+                  <a href={siteUrl(`/project/${project.id}`)}>
                     <div className="project-gallery-image">
                       <img src={project.image} alt="" loading="lazy" />
                     </div>

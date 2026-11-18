@@ -9,11 +9,12 @@ import './components/layout.css'
 import usePageMotion from './hooks/use-page-motion.js'
 import useSmoothWheel from './hooks/use-smooth-wheel.js'
 import './components/motion.css'
+import { appPath } from './utils/site-url.js'
 
 export default function App() {
   usePageMotion()
   useSmoothWheel()
-  const path = window.location.pathname.replace(/\/$/, '') || '/'
+  const path = appPath()
   if (path === '/companyInfo') return <CompanyInfoPage />
   if (path === '/service') return <ServicePage />
   if (path === '/news') return <NewsPage />

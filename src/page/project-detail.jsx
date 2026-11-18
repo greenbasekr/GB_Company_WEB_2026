@@ -1,3 +1,4 @@
+import { siteUrl } from '../utils/site-url.js'
 import { useEffect, useRef, useState } from 'react'
 import Header from '../components/header.jsx'
 import Footer from '../components/footer.jsx'
@@ -167,7 +168,7 @@ export default function ProjectDetailPage({ projectId }) {
         {project ? <>
           <div className="project-detail-heading">
             <p className="detail-category">{project.category}</p>
-            <a className="detail-list-link" href="/project">프로젝트 목록 →</a>
+            <a className="detail-list-link" href={siteUrl('/project')}>프로젝트 목록 →</a>
             <h1>{project.title}</h1>
             {project.subtitle && <p className="detail-subtitle">{project.subtitle}</p>}
             <p className="detail-summary">{project.summary}</p>
@@ -176,7 +177,7 @@ export default function ProjectDetailPage({ projectId }) {
             <div className="project-detail-description">{project.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
             <ProjectSlideshow key={projectId} slides={project.slides} />
           </div>
-        </> : <div className="project-detail-heading"><h1>프로젝트를 찾을 수 없습니다.</h1><a className="detail-list-link" href="/project">프로젝트 목록 →</a></div>}
+        </> : <div className="project-detail-heading"><h1>프로젝트를 찾을 수 없습니다.</h1><a className="detail-list-link" href={siteUrl('/project')}>프로젝트 목록 →</a></div>}
       </div>
     </main>
     <Footer />

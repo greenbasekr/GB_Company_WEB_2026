@@ -1,3 +1,4 @@
+import { siteUrl, appPath } from '../utils/site-url.js'
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import Logo from './logo.jsx'
@@ -26,7 +27,7 @@ export default function Header({ variant = 'overlay' }) {
         </button>
         <nav id="main-nav" className={`navigation${menuOpen ? ' is-open' : ''}`} aria-label="주 메뉴">
           {links.map(([label, href]) => (
-            <a key={href} href={href} aria-current={window.location.pathname.replace(/\/$/, '') === href || (!href.includes('#') && window.location.pathname.startsWith(`${href}/`)) ? 'page' : undefined} onClick={() => setMenuOpen(false)}>{label}</a>
+            <a key={href} href={siteUrl(href)} aria-current={window.location.pathname.replace(/\/$/, '') === href || (!href.includes('#') && appPath().startsWith(`${href}/`)) ? 'page' : undefined} onClick={() => setMenuOpen(false)}>{label}</a>
           ))}
         </nav>
       </div>

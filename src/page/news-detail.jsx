@@ -1,3 +1,4 @@
+import { siteUrl } from '../utils/site-url.js'
 import Header from '../components/header.jsx'
 import Footer from '../components/footer.jsx'
 import { newsPosts, searchNews, newsListUrl } from '../data/news.js'
@@ -29,10 +30,10 @@ export default function NewsDetailPage({ postId }) {
           </header>
           <div className="news-article-body">{post.paragraphs.map(paragraph => <p key={paragraph}>{paragraph}</p>)}</div>
           <nav className="news-adjacent" aria-label="다른 게시글">
-            {[['이전 글', newer], ['다음 글', older]].map(([label, item]) => <div key={label}><span>{label}</span>{item ? <a href={`/news/${item.id}${context}`}>{item.title}</a> : <p>{label}이 없습니다.</p>}{item && <time dateTime={item.date}>{item.displayDate}</time>}</div>)}
+            {[['이전 글', newer], ['다음 글', older]].map(([label, item]) => <div key={label}><span>{label}</span>{item ? <a href={siteUrl(`/news/${item.id}${context}`)}>{item.title}</a> : <p>{label}이 없습니다.</p>}{item && <time dateTime={item.date}>{item.displayDate}</time>}</div>)}
           </nav>
         </article> : <div className="news-page-heading"><p className="news-page-label">소식</p><h1>게시글을 찾을 수 없습니다.</h1><p>삭제되었거나 존재하지 않는 게시글입니다.</p></div>}
-        <div className="news-article-actions"><a href={listUrl}>소식 목록 →</a></div>
+        <div className="news-article-actions"><a href={siteUrl(listUrl)}>소식 목록 →</a></div>
       </div>
     </main>
     <Footer />

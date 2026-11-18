@@ -1,3 +1,4 @@
+import { siteUrl } from '../utils/site-url.js'
 import { useState } from 'react'
 import Hero from '../components/hero.jsx'
 import Footer from '../components/footer.jsx'
@@ -41,10 +42,10 @@ export default function MainPage() {
 
   return <>
     <Hero eyebrow="GREENBASE" title={<>A BATTERY DATA<br/>SPECIALIZED<br/>COMPANY</>} description="배터리 진단부터 에너지 관리까지">
-      <a href="/companyInfo" className="hero-button">회사소개 살펴보기 <Arrow/></a>
+      <a href={siteUrl('/companyInfo')} className="hero-button">회사소개 살펴보기 <Arrow/></a>
     </Hero>
     <main id="main-content">
-      <section className="news-section" id="news" aria-labelledby="news-title"><div className="container news-layout"><div className="news-intro"><p className="eyebrow">NEWS</p><h2 id="news-title">그린베이스 소식</h2><p className="section-description">그린베이스의 새로운 소식을<br/>만나보세요</p><a className="text-link" href="/news">전체 보기 <Arrow/></a></div><div className="news-board"><div className="news-tabs" aria-label="소식 분류">{['전체', '기업소식'].map(label => <button key={label} className={tab === label ? 'active' : ''} aria-pressed={tab === label} onClick={() => setTab(label)}>{label}</button>)}</div><ul id="news-list" className="news-list">{news.filter(item => tab === '전체' || item.category === tab).map(item => <li key={item.id}><a href={`/news/${item.id}`}><span className="news-category">{item.category}</span><strong>{item.title}</strong><time dateTime="2026-11-04">{item.date}</time><Arrow/></a></li>)}</ul></div></div></section>
+      <section className="news-section" id="news" aria-labelledby="news-title"><div className="container news-layout"><div className="news-intro"><p className="eyebrow">NEWS</p><h2 id="news-title">그린베이스 소식</h2><p className="section-description">그린베이스의 새로운 소식을<br/>만나보세요</p><a className="text-link" href={siteUrl('/news')}>전체 보기 <Arrow/></a></div><div className="news-board"><div className="news-tabs" aria-label="소식 분류">{['전체', '기업소식'].map(label => <button key={label} className={tab === label ? 'active' : ''} aria-pressed={tab === label} onClick={() => setTab(label)}>{label}</button>)}</div><ul id="news-list" className="news-list">{news.filter(item => tab === '전체' || item.category === tab).map(item => <li key={item.id}><a href={siteUrl(`/news/${item.id}`)}><span className="news-category">{item.category}</span><strong>{item.title}</strong><time dateTime="2026-11-04">{item.date}</time><Arrow/></a></li>)}</ul></div></div></section>
 
       <section className="services-section" id="services" aria-labelledby="services-title"><div className="container"><p className="eyebrow">OUR SERVICES</p><h2 id="services-title">배터리와 에너지, 데이터를 연결하는 솔루션</h2><div className="featured-services">{[{ image: assets.battery, title: '에너지 및 배터리 관리', text: '전기차 배터리 진단 및 평가와 운영 관리' }, { image: assets.factory, title: '스마트 팩토리 및 산업 IoT', text: '현장 설비 및 센서 데이터 수집과 연동' }].map(service => <article className="service-photo-card" key={service.title}><img src={service.image} alt="" loading="lazy"/><div><h3>{service.title}</h3><p>{service.text}</p></div></article>)}</div><div className="small-services">{[['빅데이터 및 AI 분석', '시계열 분석 기반 이상 징후 조기 탐지'], ['모바일/웹 통합 솔루션', '관제부터 운영까지 하나의 화면으로'], ['환경 및 안전 관리', '환경 및 안전 센서 모니터링과 알림']].map(([title, description]) => <article className="service-small-card" key={title}><span className="service-icon" aria-hidden="true"/><h3>{title}</h3><p>{description}</p></article>)}</div></div></section>
 

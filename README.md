@@ -98,3 +98,17 @@ Node.js 24 사용을 권장하며 `.nvmrc`에 버전을 지정했습니다.
 - 특허 3건과 인증 6건은 제공된 명칭에 맞춰 연결했습니다. 문서 미리보기는 원본 색상과 전체 내용을 유지합니다.
 - 오시는 길의 지도 링크는 주소 검색 결과를 새 탭에서 엽니다.
 
+
+## GitHub Pages 배포 (현재 설정)
+
+Pages 설정은 `Deploy from a branch` → `main` → `/docs`를 사용합니다.
+
+1. `npm run build` 실행: 배포 결과가 자동으로 `docs/`에 생성됩니다. dist를 복사하거나 이름을 바꿀 필요가 없습니다.
+2. 변경된 소스와 `docs/`를 함께 커밋하고 `main`으로 푸시합니다.
+3. GitHub Actions의 Pages 배포 완료 후 https://greenbasekr.github.io/GB_Company_WEB_2026/ 에서 확인합니다.
+
+빌드 시 저장소 경로 `/GB_Company_WEB_2026/`가 적용됩니다. 개발 서버에서는 기존 `/` 경로를 사용합니다.
+`src/utils/site-url.js`가 메뉴 및 게시글 링크의 배포 경로를 처리합니다.
+Vite 빌드 플러그인은 각 페이지와 현재 게시글/프로젝트의 `index.html`도 생성하여 직접 접속과 새로고침을 지원합니다.
+새 프로젝트 ID나 새 라우트를 추가하면 `vite.config.js`의 routes 목록도 갱신해야 합니다. 소식 ID는 데이터 파일에서 자동 반영됩니다.
+배포 전 확인은 `npm run preview` 후 `/GB_Company_WEB_2026/`로 접속합니다.

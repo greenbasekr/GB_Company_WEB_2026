@@ -1,3 +1,4 @@
+import { siteUrl } from '../utils/site-url.js'
 import { useState } from 'react'
 import Hero from '../components/hero.jsx'
 import Footer from '../components/footer.jsx'
@@ -55,7 +56,7 @@ export default function CompanyInfoPage() {
 
   return <>
     <Hero eyebrow="GREENBASE / COMPANY" title={<>A BATTERY DATA<br />SPECIALIZED<br />COMPANY</>} description="배터리 진단부터 에너지 관리까지" backgroundImage={companyImages.hero} className="company-hero">
-      <a href="/project" className="hero-button">프로젝트 살펴보기 <span aria-hidden="true">→</span></a>
+      <a href={siteUrl('/project')} className="hero-button">프로젝트 살펴보기 <span aria-hidden="true">→</span></a>
     </Hero>
     <main id="main-content" className="company-page">
       <section className="company-intro">
